@@ -1,13 +1,30 @@
 var app = angular.module('userProfiles');
 
+//Service option
 app.service('mainService', function($http) {
     this.getUsers = function() {
         return $http({
             method: 'GET',
-            url: 'http://reqr.es/api/users?page=1'
+            url: 'http://reqr.es/api/users?page=3'
         });
     };
 });
+
+
+
+
+// // Factory option - need to refactor out
+// app.factory('mainService', function($http) {
+// 	var api = 
+//    return {
+//    	getUsers: function() {
+//    		return $http({
+//             method: 'GET',
+//             url: 'http://reqr.es/api/users?page=3'
+//         })
+//    	}
+//    }
+// });
 
 
 	// var data = [
